@@ -1,0 +1,90 @@
+@import "null";
+@import "fonts";
+
+$fontsMain: "Galien Bold";
+$fontsText: "Gilroy Regular";
+$headingText: "Girloy SemiBold";
+$placeholdersFont: "Girloy light";
+$maxWidthMainContainer: 940px;
+$maxWidthSite: 1366px;
+$minWidthSite: 320px;
+$btnColor: "5A98D0";
+$headerMaxWidth: 1200px;
+
+
+
+.header{
+    display: flex;
+    max-width: $headerMaxWidth;
+    justify-content:first baseline;
+        
+}
+
+.logo{
+    position: relative;
+    top: 82%;
+    margin-left: 6.7%;
+    cursor: pointer;
+}
+
+.burger__menu{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    width: 23px;
+    height: 15px;
+    cursor: pointer;
+    margin-left: 96.5%;
+    top: 8.37%;
+}
+
+.burger__menu span,
+.burger__menu::before,
+.burger__menu::after{
+    position: absolute;
+    height: 20%;
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #356EAD;
+    margin: 0 auto;
+}
+.burger__menu::after, .burger__menu::before{
+    content: "";
+}
+.burger__menu::before{
+    top: 0;
+}
+.burger__menu::after{
+    bottom: 0;
+}
+
+.burger__menu span{
+    top: 40%;
+}
+
+@media screen and (max-width: 723px){
+    .burger__menu{
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        width: 23px;
+        height: 15px;
+        cursor: pointer;
+        margin-left: 95%;
+        top: 8.37%;
+    }
+    
+}
+@media screen and (max-width: 482px){
+    .burger__menu{
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        width: 23px;
+        height: 15px;
+        cursor: pointer;
+        margin-left: 90%;
+        top: 8.37%;
+    }
+    
+}
