@@ -16,7 +16,7 @@ $headerMaxWidth: 1200px;
 .header{
     display: flex;
     max-width: $headerMaxWidth;
-    justify-content:first baseline;
+
         
 }
 
@@ -28,17 +28,11 @@ $headerMaxWidth: 1200px;
 }
 
 .burger__menu{
-    display: flex;
-    justify-content: flex-end;
     position: absolute;
     width: 23px;
     height: 15px;
     cursor: pointer;
-    margin-left: 96.5%;
-
-
-
-
+    margin-left: 94%;
 }
 
 .burger__menu span,
@@ -50,7 +44,6 @@ $headerMaxWidth: 1200px;
     width: 100%;
     transition: 0.3s;
     background-color: #356EAD;
-    margin: 0 auto;
 }
 
 
@@ -89,11 +82,59 @@ $headerMaxWidth: 1200px;
     background-color: white;
 }
 
+.menu{
+    width: 60%;
+    height: auto;
+    background-color:rgba(245, 245, 245, 0.521);
+    position: fixed;
+    left: 25%;
+    top: -30%;
+    padding: 10px;
+    text-align: center;
+    transition: top 500ms cubic-bezier(0.68, 0.55, 0.27, 1.55);
+}
+.menu__item{
+    display: block;
+    font-size:250%;
+    font-family: $headingText;
+    color: #375980;
+    &:hover{
+        color: #1061bd;
+    }
+    &:active{
+        color: #1061bdaf;
+    }
+}
+
+.menu.animate{
+    top: 0;
+}
+
+@media screen and (min-width: 1000px){
+    .burger__menu{
+        display: flex;
+        position: absolute;
+        width: 23px;
+        height: 15px;
+        cursor: pointer;
+        margin-left: 95%;
+        top: 8.37%;
+    }
+    .menu__item{
+        display: block;
+        font-size:350%;
+        font-family: $headingText;
+    }
+    .burger__menu span{
+        top: -10px;
+    
+    }  
+}
+
 
 @media screen and (max-width: 723px){
     .burger__menu{
         display: flex;
-        justify-content: flex-end;
         position: absolute;
         width: 23px;
         height: 15px;
@@ -104,19 +145,33 @@ $headerMaxWidth: 1200px;
     .burger__menu span{
         top: -10px;
     
-    }
-    
+    }  
 }
 @media screen and (max-width: 482px){
     .burger__menu{
         display: flex;
-        justify-content: flex-end;
         position: absolute;
         width: 23px;
         height: 15px;
         cursor: pointer;
         margin-left: 90%;
         top: 8.37%;
+    }   
+    .menu__item{
+        display: block;
+        font-size:200%;
+        font-family: $headingText;
     }
-    
 }
+@media screen and (max-width: 280px){
+    .burger__menu{
+        display: flex;
+        position: absolute;
+        width: 23px;
+        height: 15px;
+        cursor: pointer;
+        margin-left: 90%;
+        top: 8.37%;
+    }   
+}
+
